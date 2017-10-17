@@ -1,7 +1,10 @@
 const fs = require('fs');
 
-function getExpPublishName(packageName, branchName) {
-  return `${packageName}-${branchName}`.replace(/[^a-zA-Z0-9\\-]/, '-');
+function getExpPublishName(packageName, config) {
+  if (config.slug)
+    return `${config.slug}`.replace(/[^a-zA-Z0-9\\-]/, '-');
+  else
+    return `${packageName}-${branchName}`.replace(/[^a-zA-Z0-9\\-]/, '-');
 }
 
 function readPackageJSON() {

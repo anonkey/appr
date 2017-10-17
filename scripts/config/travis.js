@@ -1,6 +1,7 @@
 module.exports = {
   expUsername: process.env.EXP_USERNAME,
   expPassword: process.env.EXP_PASSWORD,
+  expSlug: process.env.EXP_SLUG,
   githubUsername: process.env.GITHUB_USERNAME,
   githubToken: process.env.GITHUB_TOKEN,
   githubOrg: (process.env.TRAVIS_REPO_SLUG || '').split('/')[0],

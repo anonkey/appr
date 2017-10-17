@@ -5,6 +5,9 @@ module.exports = {
   // exponent password for publishing
   expPassword: process.env.EXP_PASSWORD,
 
+  // exponent slug for override default name
+  expSlug: process.env.EXP_SLUG,
+
   // github username for posting into PR
   githubUsername: process.env.GITHUB_USERNAME,
 

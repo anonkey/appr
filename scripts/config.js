@@ -11,12 +11,13 @@ for (const key in config) {
   const value = config[key];
   // shell envs are weird
   if (
+    key !== 'expSlug' && (
     typeof value === 'undefined' ||
     value === 'undefined' ||
     value === null ||
     value === '' ||
     value === 'false'
-  ) {
+  )) {
     throw new Error(`Missing configuration key ${key}`);
   }
 }
